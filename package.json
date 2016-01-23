@@ -4,7 +4,8 @@
   "description": "Flickallery web server",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run client-test",
+    "client-test": "mocha ./Test/clientSideTest.js"
   },
   "author": "Tzu-Hao Huang",
   "license": "MIT",
@@ -12,6 +13,7 @@
     "express": "^4.13.4"
   },
   "devDependencies": {
+    "mocha": "^2.3.4",
     "supertest": "^1.1.0"
   }
 }

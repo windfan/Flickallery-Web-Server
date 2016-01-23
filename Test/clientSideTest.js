@@ -20,12 +20,12 @@ describe('GET /', function(){
       .expect('Content-Type', /html/, done);
   });
 
-  /* Check for index file with photos */
-  it('Returns an index.html', function(done){
-    request(app)
-      .get('/')
-      .expect(/photos/i, done);
-  });
+  // /* Check for index file with photos */
+  // it('Returns an index.html', function(done){
+  //   request(app)
+  //     .get('/')
+  //     .expect(/photos/i, done);
+  // });
 });
 
 /* GET /photos path */
@@ -46,13 +46,13 @@ describe('GET /photos', function(){
   });
 
   /* Check for return contents */
-  it('Returns an array of photo URLs', function(done){
+  it('Returns an object of photo URLs', function(done){
     request(app)
       .get('/photos')
-      .expect(JSON.stringify([
-        'https://c1.staticflickr.com/1/600/23577541545_007c408d75_c.jpg',
-        'https://c2.staticflickr.com/6/5649/22679451641_e9db431625_c.jpg',
-        'https://c2.staticflickr.com/6/5667/22112428156_41441e6de5_c.jpg'
-      ]), done);
+      .expect(JSON.stringify({
+        "1": 'https://c1.staticflickr.com/1/600/23577541545_007c408d75_c.jpg',
+        "2": 'https://c2.staticflickr.com/6/5649/22679451641_e9db431625_c.jpg',
+        "3": 'https://c2.staticflickr.com/6/5667/22112428156_41441e6de5_c.jpg'
+      }), done);
   });
 });

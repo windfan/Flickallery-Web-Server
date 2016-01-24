@@ -1,8 +1,29 @@
 #!/usr/bin/env node
 
 var app = require('./../app');
+var server = require('http').createServer(app);
+var io = require('socket.io').listen(server);
 
-app.listen(3000, function(){
+/* Watch for connection from client's web server */
+io.sockets.on('connection', function(socket){
+  var photos = [
+    "https://c1.staticflickr.com/1/600/23577541545_007c408d75_c.jpg",
+    "https://c2.staticflickr.com/6/5649/22679451641_e9db431625_c.jpg",
+    "https://c2.staticflickr.com/6/5667/22112428156_41441e6de5_c.jpg"
+  ];
+  //photos = JSON.parse(photos);
+  for (var index in photos) {
+    socket.emit('photo', photos[index]);
+  }
+  // photos.get(function(error, data){
+  //   if(error) return;
+  //   data.forEach(function(photo){
+  //     socket.emit('photo', photo);
+  //   });
+  // });
+});
+
+server.listen(3000, function(){
 
   console.log('Listening to port 3000');
 

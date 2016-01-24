@@ -4,6 +4,7 @@ var app = require('./../app');
 var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
 var photos = require('./../models/photos');
+var subsSocket = require('./../lib/subscribe'); //socket definition for subscribe
 
 /* Watch for connection from client's web server */
 io.sockets.on('connection', function(socket){
@@ -14,6 +15,12 @@ io.sockets.on('connection', function(socket){
     });
   });
 });
+
+/* Watch for connection from pub/sub server */
+subsSocket.on('message', function(message){
+  io.sockets.emit('photo', message);
+});
+
 
 server.listen(4000, function(){
 

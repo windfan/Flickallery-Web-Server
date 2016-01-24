@@ -12,6 +12,16 @@
       "from": "after@0.8.1",
       "resolved": "https://registry.npmjs.org/after/-/after-0.8.1.tgz"
     },
+    "amp": {
+      "version": "0.3.1",
+      "from": "amp@>=0.3.1 <0.4.0",
+      "resolved": "https://registry.npmjs.org/amp/-/amp-0.3.1.tgz"
+    },
+    "amp-message": {
+      "version": "0.1.2",
+      "from": "amp-message@>=0.1.1 <0.2.0",
+      "resolved": "https://registry.npmjs.org/amp-message/-/amp-message-0.1.2.tgz"
+    },
     "ansi-regex": {
       "version": "2.0.0",
       "from": "ansi-regex@>=2.0.0 <3.0.0",
@@ -51,6 +61,11 @@
       "version": "0.6.0",
       "from": "aws-sign2@>=0.6.0 <0.7.0",
       "resolved": "https://registry.npmjs.org/aws-sign2/-/aws-sign2-0.6.0.tgz"
+    },
+    "axon": {
+      "version": "2.0.2",
+      "from": "axon@*",
+      "resolved": "https://registry.npmjs.org/axon/-/axon-2.0.2.tgz"
     },
     "backo2": {
       "version": "1.0.2",
@@ -145,6 +160,11 @@
       "version": "0.0.3",
       "from": "component-inherit@0.0.3",
       "resolved": "https://registry.npmjs.org/component-inherit/-/component-inherit-0.0.3.tgz"
+    },
+    "configurable": {
+      "version": "0.0.1",
+      "from": "configurable@0.0.1",
+      "resolved": "https://registry.npmjs.org/configurable/-/configurable-0.0.1.tgz"
     },
     "content-disposition": {
       "version": "0.5.1",
@@ -276,6 +296,11 @@
       "version": "1.0.3",
       "from": "escape-html@>=1.0.3 <1.1.0",
       "resolved": "https://registry.npmjs.org/escape-html/-/escape-html-1.0.3.tgz"
+    },
+    "escape-regexp": {
+      "version": "0.0.1",
+      "from": "escape-regexp@0.0.1",
+      "resolved": "https://registry.npmjs.org/escape-regexp/-/escape-regexp-0.0.1.tgz"
     },
     "escape-string-regexp": {
       "version": "1.0.2",

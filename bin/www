@@ -8,9 +8,9 @@ var subsSocket = require('./../lib/subscribe'); //socket definition for subscrib
 
 /* Watch for connection from client's web server */
 io.sockets.on('connection', function(socket){
-  photos.get(function(error, data){
+  photos.get(function(error, photoList){
     if(error) return;
-    data.forEach(function(photo){
+    photoList.forEach(function(photo){
       socket.emit('photo', photo);
     });
   });

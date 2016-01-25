@@ -1,6 +1,6 @@
 'use strict';
 
-var host = process.env.PHOTOS_HOST || "http://localhost:3000/photos";
+var host = process.env.PHOTOS_HOST || "http://localhost:8000/photos";
 var request = require('request');
 
 
@@ -11,6 +11,6 @@ module.exports.get = function(callback) {
   request(host, function(error, response, data){
     data = JSON.parse(data);
     if(data.error) return callback(error, []);
-    callback(null, data);
+    callback(null, data.data);
   });
 };

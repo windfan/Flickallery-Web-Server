@@ -26,10 +26,8 @@ body {
 .photo-wrapper img {
   transition: all 0.6s ease-out;
   transform: rotateY(-90deg);
-  height: 30%;
   margin: 20px;
   opacity: 0;
-  width: 30%;
 }
 
 .photo-wrapper img.on {
